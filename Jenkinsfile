@@ -24,6 +24,12 @@ pipeline {
                     }
                 }
 
+         stage('Integration Tests') {
+                 steps {
+                        sh 'mvn -B -Dtest=AppIntegrationTest test'
+                    }
+                }
+
                
 
                 stage('Code Analysis') {
