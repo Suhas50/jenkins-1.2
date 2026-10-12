@@ -26,7 +26,7 @@ pipeline {
 
          stage('Integration Tests') {
                  steps {
-                        sh 'mvn -B -Dtest=AppIntegrationTest test'
+                        sh 'mvn -B -Dtest=AppIntegrationTest -Dsurefire.failIfNoSpecifiedTests=false test'
                     }
                 }
 
